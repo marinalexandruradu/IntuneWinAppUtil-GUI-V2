@@ -26,6 +26,10 @@ namespace IntuneWin32ConverterV2
         private void Form1_Load(object sender, EventArgs e)
         {
             button4.Hide();
+            checkBox1.Checked = true;
+            button2.Hide();
+            textBox2.Hide();
+            label2.Hide();
             toolStripStatusLabel1.Text = "Ready to convert!";
             string appPath = Application.StartupPath;
             string IntuneFileLocation = appPath + @"\IntuneWinAppUtil.exe";
@@ -94,6 +98,10 @@ namespace IntuneWin32ConverterV2
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (checkBox1.Checked)
+            {
+                textBox2.Text = System.IO.Path.GetDirectoryName(textBox1.Text);
+            }
             if ((String.IsNullOrEmpty(textBox1.Text)) && (String.IsNullOrEmpty(textBox2.Text)))
             {
                 toolStripStatusLabel1.Text = "Please select a source file and an output folder";
@@ -159,6 +167,21 @@ namespace IntuneWin32ConverterV2
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.alexandrumarin.com/");
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                button2.Hide();
+                textBox2.Hide();
+                label2.Hide();
+            }
+            else {
+                button2.Show();
+                textBox2.Show();
+                label2.Show();
+            }
         }
     }
 }
