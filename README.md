@@ -1,6 +1,13 @@
 # IntuneWinAppUtil-GUI-V2
 Simple GUI Interface for IntuneWinAppUtil.exe
 
+Made things even easier and now you can check to have the output to the same source directory. Just select your executable and click Generate
+
+![10](https://user-images.githubusercontent.com/13455334/111918634-b618cd80-8a8e-11eb-8745-aa3bb7d7e402.png)
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 I was thinking that following the steps of IntuneWinAppUtil are a bit unnecessary, and when people define the source executable, this must be placed in the source folder, so i made the process even easier.
 
 I have released the V2 of IntuneWinAppUtil GUI:
